@@ -1,0 +1,170 @@
+/* General Styles */
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Poppins', Arial, sans-serif; /* Modern, clean font */
+    background-color: #f0f9f9; /* Light greenish-blue background */
+    color: #333; /* Darker text for contrast */
+}
+
+a {
+    color: #057d99; /* Greenish-blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #034d5a; /* Darker hover color */
+    text-decoration: none;
+}
+
+/* Top Content */
+.menu-1, .menu {
+    text-transform: uppercase;
+    margin-left: 5%;
+    font-weight: bold;
+    color: #034d5a; /* Greenish-blue text color */
+}
+
+.menu-bar {
+    display: none;
+    padding-right: 8%;
+}
+
+.profile-icon {
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #057d99; /* Accent border for profile icons */
+    transition: transform 0.3s ease;
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.pre-profile-1:hover {
+    background-color: rgba(194, 231, 231, 0.5); /* Lighter hover background */
+}
+
+/* Sidebar */
+.side-bar {
+    display: none;
+    background-color: rgba(0, 121, 121, 0.8); /* Semi-transparent greenish-blue */
+    width: 30%;
+    overflow: hidden;
+    margin-left: -5%;
+}
+
+.side-list {
+    position: fixed;
+    z-index: 2;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    color: white; /* White text on greenish-blue */
+}
+
+.menu-bar-1, .menu-bar-2, .close {
+    display: block;
+    font-size: 40px;
+    margin-top: -3%;
+    color: #034d5a;
+}
+
+/* Footer */
+.icons-1, .icons, .icons-2, .icons-3 {
+    border: 1px solid transparent;
+    padding: 2% 2.2%;
+    margin-left: 2%;
+    border-radius: 50%;
+    background-color: #057d99;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icons:hover {
+    background-color: #034d5a; /* Darker greenish-blue on hover */
+    transform: scale(1.1);
+}
+
+.icon-head {
+    text-align: end;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    border: 1px solid #057d99;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #034d5a; /* Focus color */
+    outline: none;
+}
+
+/* Buttons */
+button, .login-button, .signup-button {
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #057d99, #034d5a);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+button:hover, .login-button:hover, .signup-button:hover {
+    background: linear-gradient(to right, #034d5a, #057d99);
+    transform: scale(1.05);
+}
+
+/* Placeholder Styles */
+::placeholder {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 810px) {
+    .menu-1, .menu, .profile-icon, .profile {
+        display: none;
+    }
+    .menu-bar {
+        display: block;
+        font-size: 40px;
+        margin-top: -3%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .logo-1 {
+        display: none;
+    }
+    .logo-2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .side-bar {
+        height: 83.9vh;
+        margin-left: -7%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cvv, .card-number {
+        border: 1px solid #057d99;
+    }
+    .date {
+        border: 1px solid #034d5a;
+    }
+}

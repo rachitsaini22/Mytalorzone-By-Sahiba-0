@@ -1,0 +1,173 @@
+/* Update greenish-blue color */
+:root {
+    --greenish-blue: #3b8b8b; /* Define greenish-blue */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* top-content */
+.menu-1 {
+    text-transform: uppercase;
+    margin-left: 7%;
+    font-weight: bold;
+}
+
+.menu {
+    text-transform: uppercase;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.menu-bar {
+    display: none;
+    padding-right: 8%;
+}
+
+.profile-icon {
+    height: 30px;
+}
+
+.logo-2, .side-bar, .close {
+    display: none;
+}
+
+.color {
+    color: var(--greenish-blue); /* Updated color */
+    text-decoration: none;
+}
+
+.color:hover {
+    color: var(--greenish-blue); /* Updated color */
+    text-decoration: none;
+}
+
+.profile-icon::after {
+    content: "hello user";
+    height: 10%;
+    width: 10%;
+    background-color: var(--greenish-blue); /* Updated color */
+}
+
+.pre-profile-1:hover {
+    background-color: rgba(59, 139, 139, 0.5); /* Updated color with transparency */
+}
+
+.menu-bar-1, .close {
+    display: none;
+}
+
+.pre-side-bar {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: none;
+}
+
+.menu-bar-2 {
+    display: none;
+}
+
+.side-bar {
+    display: none;
+}
+
+#change-color {
+    position: fixed;
+    transition: 0.2s linear;
+    z-index: 1;
+}
+
+.side-list {
+    position: fixed;
+    z-index: 2;
+}
+
+.logo-sift {
+    margin-top: -7%;
+    margin-bottom: -6%;
+}
+
+/* middle-content */
+.search-box {
+    width: 70%;
+    border: transparent;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 5%;
+    background-color: rgb(212, 203, 203);
+}
+
+#search-icon {
+    height: 20px;
+    margin-top: 4px;
+}
+
+.search-button {
+    border: transparent;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--greenish-blue); /* Updated color */
+    color: white;
+}
+
+.image-lable {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+*:focus {
+    outline: none;
+}
+
+.icons-1, .icons, .icons-2, .icons-3 {
+    border: 1px solid transparent;
+    padding: 2% 2.2%;
+    margin-left: 2%;
+    border-radius: 50px;
+    background-color: var(--greenish-blue); /* Updated color */
+    color: white;
+}
+
+.icons-2 {
+    padding: 2% 3%;
+}
+
+.icons-3 {
+    padding: 2% 2.5%;
+}
+
+.icons {
+    padding: 2% 2.8%;
+}
+
+.icon-head {
+    text-align: end;
+}
+
+/* Media queries */
+@media screen and (max-width:768px) {
+    .footer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .icon-head {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .hide-girl {
+        display: none;
+    }
+}

@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    background-color: #f0f8f8; /* Light greenish-blue background */
+    color: #333; /* Neutral text color */
+}
+
+.menu-1,
+.menu {
+    text-transform: uppercase;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.menu-bar {
+    display: none;
+    padding-right: 8%;
+    font-size: 20px;
+    color: #2a9d8f; /* Greenish-blue for buttons and menu bar */
+}
+
+.profile-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid #2a9d8f; /* Greenish-blue border */
+    cursor: pointer;
+}
+
+.color {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.color:hover {
+    color: #1f776e; /* Darker greenish-blue for hover effect */
+}
+
+.profile-icon::after {
+    content: " Hello User";
+    height: auto;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #555;
+    background-color: transparent;
+}
+
+.pre-profile-1:hover {
+    background-color: rgba(42, 157, 143, 0.2); /* Soft greenish-blue hover */
+}
+
+.girl-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    border: 5px solid #ccc; /* Subtle border color */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.girl-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.image-lable {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2a9d8f;
+}
+
+/* Transparent Section */
+.transparent {
+    background-image: url('desktop.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9; /* Softer overlay */
+}
+
+/* Icon Styles */
+.icons-1,
+.icons,
+.icons-2,
+.icons-3 {
+    border: 2px solid transparent;
+    padding: 10px 12px;
+    margin-left: 2%;
+    border-radius: 50px;
+    background-color: #2a9d8f;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.icons:hover {
+    background-color: #1f776e; /* Hover effect */
+}
+
+/* Menu Bar for Mobile */
+@media screen and (max-width: 810px) {
+    .menu-1,
+    .menu,
+    .profile-icon,
+    .profile {
+        display: none;
+    }
+    .menu-bar {
+        display: block;
+        font-size: 28px;
+        color: #2a9d8f;
+        margin-top: -3%;
+    }
+    .side-bar {
+        height: 81.1vh;
+        width: 70%;
+        background-color: #eaf6f6;
+        display: block;
+        margin-left: -5%;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+    .pre-side-bar {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333;
+    }
+    .close {
+        display: block;
+        font-size: 28px;
+        color: #2a9d8f;
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 425px) {
+    .logo-1 {
+        display: none;
+    }
+    .logo-2 {
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .side-bar {
+        height: 84vh;
+        margin-left: -10%;
+        background-color: #eaf6f6;
+    }
+    .sale-img {
+        margin-left: -15%;
+    }
+    .sift-girl {
+        margin-left: -10%;
+    }
+}

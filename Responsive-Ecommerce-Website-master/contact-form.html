@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS_files/contact-form.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('Images/login-background.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .contact-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: none;
+        }
+        .send-button {
+            background-color: #007bff;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .send-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contact-form">
+        <p class="text-center contact-heading">Contact Us</p>
+        <div class="form-group">
+            <input type="text" placeholder="Name" class="form-control name">
+            <div class="name-hide text-danger"></div>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Mobile No." class="form-control mobile">
+            <div class="mobile-hide text-danger"></div>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Email ID" class="form-control email">
+            <div class="email-hide text-danger"></div>
+        </div>
+        <div class="form-group">
+            <textarea rows="5" placeholder="Message" class="form-control message"></textarea>
+            <div class="hide-message text-danger"></div>
+        </div>
+        <div class="form-group">
+            <span class="btn send-button">Send</span>
+        </div>
+    </div>
+    <script>
+        $(".send-button").click(function(){
+            var firstname = $(".name").val(); 
+            var check = /^[a-zA-Z\s]+$/;
+            // Name validation
+            if (firstname == "") {
+                $(".name-hide").text("Enter your name");
+                return false;
+            } else if (!firstname.match(check)) {
+                $(".name-hide").text("Enter your valid name");
+                return false;
+            } else if (firstname.length > 20) {
+                $(".name-hide").text("More than 20 char. is not allowed");
+                return false;
+            } else {
+                $(".name-hide").text("");
+            }
+
+            // Mobile number validation
+            var mobile = $(".mobile").val();
+            var check_mobile = /^[0-9]+$/;
+            if (mobile == "") {
+                $(".mobile-hide").text("Enter your mobile no.");
+                return false;
+            } else if (!mobile.match(check_mobile)) {
+                $(".mobile-hide").text("Enter your valid mobile no.");
+                return false;
+            } else {
+                $(".mobile-hide").text("");
+            }
+
+            // Email validation
+            var check_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var email = $(".email").val();
+            if (email == "") {
+                $(".email-hide").text("Enter your email id");
+                return false;
+            } else if (!email.match(check_email)) {
+                $(".email-hide").text("Enter your valid email id");
+                return false;
+            } else {
+                $(".email-hide").text("");
+            }
+
+            // Message validation
+            var message = $(".message").val();
+            if (message == "") {
+                $(".hide-message").text("Write something for us");
+                return false;
+            } else {
+                $(".hide-message").text("");
+            }
+        });
+    </script>
+</body>
+</html>
